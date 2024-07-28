@@ -24,8 +24,8 @@ const VoiceInput = () => {
         setTranscript(transcript); // Update the state with the transcript
 
 
-        let result = await fetch("http://localhost:5000/translate", {
-          method: "post",
+        let result = await fetch("https://language-translator-python-backend.onrender.com/translate", {   //http://localhost:5000/translate
+          method: "post", 
           body: JSON.stringify({ transcript: transcript }),
           headers: {
             "Content-Type": "application/json"
