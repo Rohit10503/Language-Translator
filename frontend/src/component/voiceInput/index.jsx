@@ -27,7 +27,7 @@ const VoiceInput = () => {
        
         // Request to backend
         console.log("abbhi hai ", preferedLang)
-        let result = await fetch("http://localhost:5000/translate", {   //http://localhost:5000/translate      https://language-translator-python-backend.onrender.com/translate
+        let result = await fetch("https://language-translator-python-backend.onrender.com/translate", {   //http://localhost:5000/translate      https://language-translator-python-backend.onrender.com/translate
           method: "post",
           body: JSON.stringify({
             transcript: transcript,
