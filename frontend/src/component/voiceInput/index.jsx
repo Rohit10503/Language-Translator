@@ -24,7 +24,7 @@ const VoiceInput = () => {
         setTranscript(transcript); // Update the state with the transcript
 
 
-       
+
         // Request to backend
         console.log("abbhi hai ", preferedLang)
         let result = await fetch("https://language-translator-python-backend.onrender.com/translate", {   //http://localhost:5000/translate      https://language-translator-python-backend.onrender.com/translate
@@ -41,7 +41,7 @@ const VoiceInput = () => {
         result = await result.json();
         setTranslatedOutput(result)
         console.log(result);
-      
+
 
 
       };
@@ -72,7 +72,7 @@ const VoiceInput = () => {
     if (recognition) {
       recognition.start();
     }
-    
+
   };
 
 
@@ -82,16 +82,17 @@ const VoiceInput = () => {
     setPreferedLang(event.target.value);
     console.log("call hua", event.target.value, " hai toh ", preferedLang)
   };
-// To spek output
-    const speak=()=>{
-      const utterance = new SpeechSynthesisUtterance(translatedOutput.transcript);
-      utterance.lang = "hi-IN"
-      window.speechSynthesis.speak(utterance);
-    }
+  // To spek output
+  const speak = () => {
+    const utterance = new SpeechSynthesisUtterance(translatedOutput.transcript);
+    utterance.lang = "hi-IN"
+    window.speechSynthesis.speak(utterance);
+  }
   return (
     <>
       <div className="take-user-input">
         <textarea
+          class="textarea"
           type="text"
           id="voiceInput"
           placeholder="Speak something..."
@@ -99,27 +100,34 @@ const VoiceInput = () => {
 
 
         />
+        <div>
         <button className="inp-btn" onClick={() => startRecognition()}>Start Voice Input</button>
-
+        </div>
 
 
 
       </div>
       <div className="output">
-        
-      {preferedLang}
+
+        {/* {preferedLang} */}
+        <div className="select is-normal">
         <select name="language"
+        className="select-tag"
           id="language"
           value={preferedLang}
-          onChange={handleLanguageChange}> 
+          onChange={handleLanguageChange}>
           <optgroup>
             <option value="en">English</option>
             <option value="mr">Marathi</option>
-            <option value="hi">Hindi</option>
-            <option value="sa">Sanskrit</option>
+            <option value="gu">Gujrati</option>
+
+            {/* <option value="hi">Hindi</option> */}
+            {/* <option value="sa">Sanskrit</option> */}
           </optgroup>
         </select>
+        </div>
         <textarea
+          class="textarea"
           type="text"
           id="voiceOutput"
           placeholder="Translate Here..."
@@ -127,7 +135,8 @@ const VoiceInput = () => {
 
 
         />
-        <button onClick={speak}>Speak</button>
+        <button className="button" onClick={speak}>Speak</button>
+        <i onClick={speak} class="fa-solid fa-volume-high"></i>
 
       </div>
 
