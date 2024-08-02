@@ -13,11 +13,14 @@
     font-size: 1rem;
     font-weight: bold;
     color: rgb(224, 28, 250);
-    min-height: 200px;
+    min-height: 180px;
+    max-height: 200px;
+    max-width: 400px;;
 }
 .inp-btn{
     padding: 1em;
     border-radius: 2em;
+    cursor:pointer;
     border: 0.5px solid grey;
     box-shadow: 0.2em 0.2em 20px grey ;
 }

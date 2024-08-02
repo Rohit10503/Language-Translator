@@ -27,7 +27,8 @@ def translate():
     data = request.get_json()
     
     inp_transcript = data.get('transcript')
-    translated_text=translate_text(inp_transcript, 'hi', 'en')
+    inp_lang=data.get('lang')
+    translated_text=translate_text(inp_transcript, 'hi', inp_lang)
     
     response = {
         'message': 'Received transcript',
