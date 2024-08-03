@@ -46,3 +46,13 @@
 .select-tag{
     width: 100%;
 }
+.Features{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+
+.copy-done{
+    color: rgb(132, 0, 255);
+}

@@ -12,7 +12,7 @@ const Home=()=>{
         </div>
 
 
-        <div className="footer_me"><h1 className="title is-6">Maintain & Developed By Rohitkumar</h1></div>
+        <div className="footer_me"><h1 className="title is-6 primary">Maintain & Developed By Rohitkumar</h1></div>
         </>
     )
 }

@@ -1,0 +1,33 @@
+.navbar {
+    padding: 0.4em 4em;
+}
+
+@media screen and (min-width: 480px) {
+
+
+    .navbar-menu .navbar-end {
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .mob-navbar-end {
+        display: none;
+    }
+
+
+    .navbar-burger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 0.2em 1em;
+    }
+
+    .mob-navbar-end .navbar-link {
+        color: pink;
+    }
+}
