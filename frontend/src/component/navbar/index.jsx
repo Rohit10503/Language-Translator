@@ -21,7 +21,7 @@ const Navbar = () => {
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-items" href="#">
-                    <img className="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYQySYBmm0HOCgjBGRoEpbwXvPXbPaY5DmA&s" alt="Logo" />
+                    <img className="Logo" src="src\images\images.jfif" alt="Logo" />
 
                 </a>
                 <div role="button" onClick={() => { showNavbar() }} class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
