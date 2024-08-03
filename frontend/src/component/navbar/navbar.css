@@ -1,33 +1,43 @@
+.Nav-supreme{
+    transition: all ease-in-out 1s;
+}
 .navbar {
-    padding: 0.4em 4em;
+    padding: 0.4em 1em;
+    
+}
+.navbar-items img{
+    height: 4em;
+    /* width: 12px; */
+}
+.mob-navbar-end {
+    transition: all ease-in-out 1s;
+    display: none;
+    background-color: rgb(255, 255, 255);
 }
 
 @media screen and (min-width: 480px) {
-
+    .navbar {
+        padding: 0.4em 1em;
+       
+    }
+    
 
     .navbar-menu .navbar-end {
+        
         display: flex;
         justify-content: center;
 
 
     }
 
+    
+    
+
+    
+}
+@media screen and (max-width: 1025px) {
     .mob-navbar-end {
         display: none;
     }
-
-
-    .navbar-burger {
-        display: none;
-    }
 }
 
-@media screen and (max-width: 480px) {
-    .navbar {
-        padding: 0.2em 1em;
-    }
-
-    .mob-navbar-end .navbar-link {
-        color: pink;
-    }
-}

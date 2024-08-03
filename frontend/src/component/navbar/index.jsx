@@ -4,10 +4,10 @@ const Navbar = () => {
 
 
     const showNavbar = () => {
-       
+
         // alert("yes");
         let mob_nav = document.getElementById("mob-navbar-end");
-        if (mob_nav.style.display === "none") {
+        if (mob_nav.style.display === "none"  || mob_nav.style.display === "") {
             mob_nav.style.display = "block"
         }
         else {
@@ -17,10 +17,11 @@ const Navbar = () => {
 
 
     return <>
+    <div className="Nav-supreme">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq09qDHjSZcO_6gvi-BTtSsMa2OqKEDeW8ag&s" alt="Logo" />
+                <a class="navbar-items" href="#">
+                    <img className="Logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThYQySYBmm0HOCgjBGRoEpbwXvPXbPaY5DmA&s" alt="Logo" />
 
                 </a>
                 <div role="button" onClick={() => { showNavbar() }} class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -61,20 +62,23 @@ const Navbar = () => {
 
 
             </div>
-            <div class="mob-navbar-end" id="mob-navbar-end">
 
-                <a className="navbar-item">
-                    Home
-                </a>
-                <a className="navbar-item">
-                    About
-                </a>
-                <a className="navbar-item">
-                    Feedback
-                </a>
-
-            </div>
         </nav>
+
+        <div className="mob-navbar-end" id="mob-navbar-end">
+
+            <a className="navbar-item">
+                Home
+            </a>
+            <a className="navbar-item">
+                About
+            </a>
+            <a className="navbar-item">
+                Feedback
+            </a>
+
+        </div>
+        </div>
     </>
 }
 export default Navbar
