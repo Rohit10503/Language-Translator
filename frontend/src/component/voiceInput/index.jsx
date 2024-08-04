@@ -43,7 +43,7 @@ const VoiceInput = () => {
         setTranslatedOutput(result)
         console.log(result);
 
-
+        setCopySuccess(false)
 
       };
 
@@ -99,6 +99,7 @@ const VoiceInput = () => {
     });
     result = await result.json();
     setTranslatedOutput(result)
+    setCopySuccess(false)
     console.log(result);
 
 
